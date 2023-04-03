@@ -74,10 +74,13 @@ main button {
   align-items: center;
   gap: 10px;
 
-  background: #69B99D;
+  background: #69b99d;
   border-radius: 4px;
   font-size: 16px;
   color: #F9F9F9;
+}main button:hover{
+  background: #4b836f;
+
 }
 
 footer, footer a {

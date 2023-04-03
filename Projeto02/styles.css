@@ -1,0 +1,32 @@
+body{
+  padding: 0;
+  height: 720px;
+  width: 1280px;
+  margin: 65px auto 30px;
+}
+header{
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 58px;
+}
+header ul{
+  list-style: none;
+  gap: 48px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+main{
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+footer{ 
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+}

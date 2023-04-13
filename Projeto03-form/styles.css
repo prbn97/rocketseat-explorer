@@ -32,12 +32,13 @@ header {
 
 }
 
-h1 {
+header h1 {
   font-family: 'Archivo', sans-serif;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
+  margin-bottom: 24px;
 }
 
 p {
@@ -48,19 +49,32 @@ p {
   line-height: 26px;
 }
 
+body,
+form,
+fieldset,
+input,
+select,
+button,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
 form {
   margin-top: 38px;
   padding: 64px;
   background: #FAFAFC;
   border-radius: 8px 8px 0px 0px;
-
-  min-height: 300px;
 }
 
 fieldset {
-  font-family: 'Poppins', sans-serif;
-
   border: none;
+}
+
+.fieldset-wrapper {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 fieldset legend {
@@ -78,16 +92,12 @@ fieldset legend {
 }
 
 .input-wrapper {
-  display: flex;
   flex-direction: column;
-  
-}
+  display: flex;
 
-.input-wrapper input{
-  background: #FAFAFC;
-  border: 1px solid #E6E6F0;
-  border-radius: 8px;
-  min-height: 56px;
+  width: 100%;
+
+
 }
 
 .input-wrapper label {
@@ -101,7 +111,45 @@ fieldset legend {
   margin-left: 12px;
 
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   color: #C1BCCC;
+}
+
+.input-wrapper input {
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  height: 56px;
+  padding: 0 24px;
+  gap: 24px;
+
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #C1BCCC;
+}
+
+#private-checkbox {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#checkbox-private-event {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+
+}
+
+
+.wrapper-date-time {
+  display: flex;
+  gap: 20px;
+}
+
+#event-date {
+  width: 312px;
 }

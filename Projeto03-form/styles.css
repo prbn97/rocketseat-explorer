@@ -29,7 +29,6 @@ body {
 header {
   width: 319px;
   margin-top: 64px;
-
 }
 
 header h1 {
@@ -75,6 +74,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
 fieldset legend {
@@ -88,7 +88,6 @@ fieldset legend {
   width: 100%;
   padding-bottom: 16px;
   border-bottom: 3px solid #e6e6f0;
-
 }
 
 .input-wrapper {
@@ -96,14 +95,14 @@ fieldset legend {
   display: flex;
 
   width: 100%;
-
-
 }
 
-.input-wrapper label {
+.input-wrapper label,
+.checkbox-wrapper label {
   font-size: 16px;
   line-height: 34px;
   color: #4E4958;
+
   margin-bottom: 8px;
 }
 
@@ -113,36 +112,68 @@ fieldset legend {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #C1BCCC;
+  color: #6c6c71;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
   background: #FAFAFC;
   border: 1px solid #E6E6F0;
   border-radius: 8px;
   height: 56px;
   padding: 0 24px;
-  gap: 24px;
-
 
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
-  color: #C1BCCC;
+  color: #6c6c71;
 }
 
-#private-checkbox {
+.input-wrapper textarea {
+  padding: 0px;
+  height: 168px;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1325_50)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1325_50'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+.checkbox-wrapper {
+}
+
+.checkbox-wrapper label {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
 
 }
 
-#checkbox-private-event {
+.checkbox-wrapper input{
+  display: none;
+}
+
+.checkbox-wrapper label::before{
+  content: '';
   width: 24px;
   height: 24px;
-  margin-right: 16px;
+  display: block;
 
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
 }
+
+.checkbox-wrapper input:checked + label::before{
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='24' height='24' rx='8' fill='%23FAFAFC' stroke='%23E6E6F0'/%3E%3Cg clip-path='url(%23clip0_1325_28)'%3E%3Cpath d='M10 17.17L5.83 13L4.41 14.41L10 20L22 8L20.59 6.59L10 17.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1325_28'%3E%3Crect width='24' height='24' fill='white' transform='translate(1 1)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+
 
 
 .wrapper-date-time {
